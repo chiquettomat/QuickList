@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickList</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="logo">
+        <img src="./assets/logo.png" alt="" />
+      </div>
+      <header>
+        <h1>My shop list</h1>
+        <div class="flex">
+          <input
+            class="itens"
+            type="text"
+            placeholder="Add a New Item"
+            required
+          />
+          <button type="submit" id="add">Add Item</button>
+        </div>
+      </header>
+
+      <main id="itensList">
+        <ul class="style" id="listItens"></ul>
+        <section id="insertAlert" class="animation">
+          <img
+            src="./assets/alert-circle-stroke-rounded.svg"
+            alt=""
+            class="alert"
+          />
+          <p>The item has been removed</p>
+          <button type="button" id="cancelMessage">
+            <img src="./assets/cancel-01-stroke-rounded.svg" alt="" />
+          </button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

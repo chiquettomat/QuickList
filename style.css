@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-primary-color: #f4f5fb;
+  --color-brand: #ca3884;
+  --color-brand-hover: #a52c6b;
+  --color-removed-item: #c93847;
+  --content-primary-color: #080b12;
+  --content-secondary-color: #374151;
+  --content-tertiery-color: #9ca3af;
+  --border-primary-color: #d1d5db;
+  --border-hover-color: #b9c2d0;
+}
+
+body {
+  font-size: 1.6rem;
+
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary-color);
+}
+
+body,
+input,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-width: 39rem;
+  padding: 0 3.2rem;
+  height: 100dvh;
+  margin: 0 auto;
+}
+
+.logo {
+  text-align: center;
+  padding-top: 7.8rem;
+}
+
+header {
+  width: 100%;
+  box-sizing: content-box;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 800;
+  padding-bottom: 4.4rem;
+}
+
+header input,
+button {
+  width: 100%;
+  border-radius: 1.2rem;
+  height: 4.4rem;
+  font-size: 1.4rem;
+}
+
+header input {
+  font-weight: 300;
+  line-height: 140%;
+  margin-bottom: 1.6rem;
+  padding-left: 1.8rem;
+  color: var(--content-tertiery-color);
+  background-color: #ffff;
+  border: 2px solid var(--border-primary-color);
+}
+
+header input:hover {
+  border: 2px solid var(--border-hover-color);
+}
+
+.itens:focus {
+  outline: 2px solid var(--color-brand);
+  border: none;
+}
+
+header button {
+  font-weight: 600;
+  line-height: 2rem;
+  color: white;
+  border: none;
+  background-color: var(--color-brand);
+  margin-bottom: 4rem;
+  padding: 1.2rem 2.4rem;
+}
+
+#add:hover {
+  background-color: var(--color-brand-hover);
+  transition: 500ms;
+}
+
+main {
+  width: 100%;
+}
+
+main .style {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+main .style .listItem {
+  background-color: #ffff;
+  border-radius: 1.2rem;
+  height: 5.7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  padding-left: 1.2rem;
+  color: var(--content-primary-color);
+}
+
+.select {
+  margin-right: 0.85rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.select:checked {
+  width: 7rem;
+}
+
+main .style .listItem button {
+  border: none;
+  width: fit-content;
+  background: none;
+  padding-right: 1.6rem;
+}
+
+.listItem p {
+  height: 3.3rem;
+  width: 50%;
+  margin-right: 13rem;
+  display: flex;
+  align-items: center;
+}
+
+button.icon1 {
+  margin-left: 1.6rem;
+}
+
+button.icon2 {
+  margin-left: 3.7rem;
+}
+
+#insertAlert {
+  width: 100%;
+  height: 4.4rem;
+  margin-top: 3.6rem;
+}
+
+#insertAlert {
+  background-color: var(--color-removed-item);
+  border-radius: 1.2rem;
+  height: 4.4rem;
+  color: #ffff;
+  display: flex;
+  margin-top: 3.8rem;
+  padding: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+#insertAlert button {
+  border: none;
+  background: none;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#insertAlert img {
+  width: 2rem;
+}
+
+#insertAlert p {
+  margin-right: 3.6rem;
+}
+
+.animation {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 62.7rem;
+    height: fit-content;
+    padding-bottom: 13.7rem;
+  }
+
+  main .listItem p {
+    margin-right: 33rem;
+    width: 25%;
+  }
+
+  .listItem button {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 9.4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .flex {
+    display: flex;
+    gap: 1.6rem;
+    width: 100%;
+  }
+
+  .itens {
+    width: 45.1rem;
+  }
+
+  #add {
+    width: 16rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main .listItem {
+    max-width: 62.7rem;
+  }
+
+  .listItem p {
+    width: 25%;
+  }
+
+  .removedMessage {
+    max-width: 62.7rem;
+  }
+}
